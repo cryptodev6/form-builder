@@ -9,7 +9,7 @@ const Routing: Routes = [
       ),
   },
   {
-    path: 'dashboard',
+    path: 'configuration',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
@@ -52,7 +52,7 @@ const Routing: Routes = [
   },
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/configuration',
     pathMatch: 'full',
   },
   {

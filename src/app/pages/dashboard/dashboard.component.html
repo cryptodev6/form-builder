@@ -1,68 +1,105 @@
-<!-- begin::Row -->
-<div class="row gy-5 g-xl-8">
-  <div class="col-12  col-md-8 col-xxl-4">
-    <app-lists-widget5 class="card card-xxl-stretch"></app-lists-widget5>
-  </div>
-  <div class="col-12 col-md-4 col-xxl-4">
-    <app-lists-widget5 class="card card-xxl-stretch"></app-lists-widget5>
-  </div>
+<div id="scrolledtabs">
+  <h1 class="caption pt-5 pb-5 text-white">Configuration</h1>
+  <dx-tabs
+    [dataSource]="longtabs"
+    [width]="300"
+    [scrollByContent]="true"
+    [showNavButtons]="true"
+    (onItemClick)="selectTab($event)"
+    style="border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    border: none;">
+  </dx-tabs>
+  <dx-popup
+    [width]="400"
+    [height]="280"
+    [title]="popupTitle"
+    [hideOnOutsideClick]="true"
+    [(visible)]="popupVisible">
+    <div *dxTemplate="let data of 'content'">
+      <div class="row gy-5 gx-xl-8">
+        <div class="col-xl-12 mt-0">
+          <div class="dx-fieldset m-0 my-3">
+            <div class="dx-field">
+              <div class="dx-field-value w-100">
+                <dx-select-box
+                  [dataSource]="simpleProducts"
+                  displayExpr="Name"
+                  valueExpr="ID"
+                  [searchMode]="searchModeOption"
+                  [searchExpr]="searchExprOption"
+                  [searchTimeout]="searchTimeoutOption"
+                  [minSearchLength]="minSearchLengthOption"
+                  [searchEnabled]="true"
+                  [showDataBeforeSearch]="showDataBeforeSearchOption"></dx-select-box>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-12 mt-0">
+          <div class="dx-fieldset m-0 my-3">
+            <div class="dx-field">
+              <div class="dx-field-value w-100">
+                <dx-drop-down-box
+                  [(value)]="gridBoxValue"
+                  [(opened)]="isGridBoxOpened"
+                  valueExpr="ID"
+                  [deferRendering]="false"
+                  [displayExpr]="gridBox_displayExpr"
+                  placeholder="Select a value..."
+                  [showClearButton]="true"
+                  [dataSource]="gridDataSource"
+                  (onOptionChanged)="onGridBoxOptionChanged($event)">
+                  <div *dxTemplate="let data of 'content'">
+                    <dx-data-grid
+                      [dataSource]="gridDataSource"
+                      [columns]="gridColumns"
+                      [hoverStateEnabled]="true"
+                      [(selectedRowKeys)]="gridBoxValue"
+                      height="100%">
+                      <dxo-selection mode="single"></dxo-selection>
+                      <dxo-filter-row [visible]="true"></dxo-filter-row>
+                      <dxo-scrolling mode="virtual"></dxo-scrolling>
+                      <dxo-paging [enabled]="true" [pageSize]="10"></dxo-paging>
+                    </dx-data-grid>
+                  </div>
+                </dx-drop-down-box>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-12 d-flex align-items-center mt-0">
+          <div class="dx-field w-100">
+            <div class="dx-field-label">Orden Personalizado</div>
+            <div class="dx-field-value">
+              <dx-check-box [value]="false"></dx-check-box>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-12 d-flex">
+          <dx-button
+            text="Acceptar"
+            stylingMode="contained"
+            type="default"
+            class="me-3">
+          </dx-button>
+          <dx-button
+            text="Cancelar"
+            stylingMode="outlined"
+            type="normal">
+          </dx-button>
+        </div>
+      </div>
+    </div>
+  </dx-popup>
 </div>
-<div class="row gy-5 g-xl-8">
-  <div class="col-xxl-4">
-    <app-mixed-widget2 class="card card-xl-stretch mb-xl-8" chartColor="danger" chartHeight="200px"
-      strokeColor="#cb1e46"></app-mixed-widget2>
-  </div>
-  <div class="col-xxl-4">
-    <app-lists-widget5 class="card card-xxl-stretch"></app-lists-widget5>
-  </div>
-  <div class="col-xxl-4">
-    <app-mixed-widget10 class="card card-xxl-stretch-50 mb-5 mb-xl-8" chartColor="primary" chartHeight="150px">
-    </app-mixed-widget10>
-    <app-mixed-widget11 class="card card-xxl-stretch-50 mb-5 mb-xl-8" chartColor="primary" chartHeight="175px">
-    </app-mixed-widget11>
-  </div>
-</div>
-<!-- end::Row -->
 
 <!-- begin::Row -->
 <div class="row gy-5 gx-xl-8">
-  <div class="col-xxl-4">
-    <app-lists-widget3 class="card card-xxl-stretch mb-xl-3"></app-lists-widget3>
-  </div>
-  <div class="col-xl-8">
-    <app-tables-widget10 class="card card-xxl-stretch mb-5 mb-xl-8"></app-tables-widget10>
+  <div class="col-xl-12">
+    <app-tables-widget10 class="card card-xxl-stretch mb-5 mb-xl-8"
+      style="border-top-left-radius: 0;"></app-tables-widget10>
   </div>
 </div>
 <!-- end::Row -->
-
-<!-- begin::Row -->
-<div class="row gy-5 g-xl-8">
-  <div class="col-xl-4">
-    <app-lists-widget2 class="card card-xl-stretch mb-xl-8"></app-lists-widget2>
-  </div>
-  <div class="col-xl-4">
-    <app-lists-widget6 class="card card-xl-stretch mb-xl-8"></app-lists-widget6>
-  </div>
-  <div class="col-xl-4">
-    <app-lists-widget4 class="card card-xl-stretch mb-5 mb-xl-8"></app-lists-widget4>
-  </div>
-</div>
-<!-- end::Row -->
-
-<div class="row g-5 gx-xxl-8">
-  <div class="col-xxl-4">
-    <app-mixed-widget8 class="card card-xxl-stretch mb-xl-3" chartColor="success" chartHeight="150px">
-    </app-mixed-widget8>
-  </div>
-  <div class="col-xxl-8">
-    <app-tables-widget5 class="card card-xxl-stretch mb-5 mb-xxl-8"></app-tables-widget5>
-  </div>
-</div>
-
-<!-- begin:: Modal example -->
-<app-modal #modal [modalConfig]="modalConfig">
-  <div>
-    <h2>Your changes have beens saved</h2>
-  </div>
-</app-modal>
-<!-- end:: Modal example -->
