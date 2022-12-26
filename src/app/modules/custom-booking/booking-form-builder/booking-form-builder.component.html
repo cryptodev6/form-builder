@@ -1,0 +1,55 @@
+<div class="card mb-5 mb-xl-10">
+  <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+    data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+    <div class="card-title m-0">
+      <h3 class="fw-bolder m-0">Basic Details </h3>
+      <!-- <h4 class="">Important Information about booking</h4> -->
+    </div>
+  </div>
+  <div id="kt_account_profile_details" class="collapse show">
+    <div class="card-body border-top p-9 ">
+      <div class="col-12 d-flex justify-content-end">
+        <div class="row" style="width: 84.5%;">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6 mb-4">
+                <label for="name">Full Name*</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-6 mb-4">
+                <label for="name">Email*</label>
+                <input type="em'" class="form-control">
+              </div>
+              <div class="col-6 mb-4">
+                <label for="name">Date*</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-6 mb-4">
+                <label for="name">Time*</label>
+                <input type="time" class="form-control">
+              </div>
+              <div class="col-6 mb-4">
+                <label for="name">Duration*</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col-6 mb-4">
+                <label for="name">Occupation*</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form-builder [form]="form" [options]="options" #formio>
+      </form-builder>
+    </div>
+  </div>
+  <div class="well jsonviewer d-none">
+    <pre id="json"><code class="language-json" #json></code></pre>
+  </div>
+</div>
+<app-modal [modalConfig]="modalConfig" #modal>
+  <div>
+    <h2>Your changes have beens saved</h2>
+  </div>
+</app-modal>
