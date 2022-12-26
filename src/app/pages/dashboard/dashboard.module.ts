@@ -11,6 +11,7 @@ import { DxTabsModule,
   DxCheckBoxModule,
   DxPopupModule, 
   DxButtonModule,
+  DxBulletModule,
   DxTemplateModule} from 'devextreme-angular';
   import {  } from 'devextreme-angular';
 import { DashboardService } from './dashboard.service';
@@ -35,7 +36,8 @@ import { DashboardService } from './dashboard.service';
     DxCheckBoxModule,
     DxPopupModule,
     DxButtonModule,
-    DxTemplateModule
+    DxTemplateModule,
+    DxBulletModule,
   ],
   providers: [DashboardService]
 })

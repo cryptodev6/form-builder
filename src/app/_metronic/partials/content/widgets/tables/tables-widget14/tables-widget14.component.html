@@ -1,1 +1,53 @@
-<p>tables-widget14 works!</p>
+<dx-data-grid
+    id="gridContainer"
+    [dataSource]="dataSource"
+    [remoteOperations]="false"
+    [allowColumnReordering]="true"
+    [rowAlternationEnabled]="true"
+    [showBorders]="true">
+    <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling>
+    <dxo-paging [pageSize]="5"></dxo-paging>
+    <!-- [displayMode]="displayMode" -->
+    <dxo-pager
+        [visible]="true"
+        [showInfo]="true"
+        [displayMode]="'compact'"
+        [showNavigationButtons]="true"
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[5,10, 25, 50, 100]"></dxo-pager>
+
+
+    <dxi-column dataField="Nombre" [width]="10+'%'" cssClass="text-wrap"></dxi-column>
+    <dxi-column dataField="Abreviatura" [width]="7+'%'"></dxi-column>
+    <dxi-column dataField="Descripción" [width]="10+'%'" cssClass="text-wrap"></dxi-column>
+    <dxi-column dataField="Obligatorio" [width]="8+'%'" cssClass="text-wrap"></dxi-column>
+    <dxi-column dataField="Único"></dxi-column>
+    <dxi-column dataField="Posición"></dxi-column>
+    <dxi-column dataField="Nro Secuencia"></dxi-column>
+    <dxi-column dataField="Tipo de Dato" cssClass="text-wrap"></dxi-column>
+    <dxi-column dataField="Por Defecto"></dxi-column>
+    <dxi-column dataField="% Promedio de Uso"></dxi-column>
+    <dxi-column dataField="Longitud Máxima"></dxi-column>
+    <dxi-column dataField="Número decimales"></dxi-column>
+    <dxi-column dataField="Fórmula Cálculo"></dxi-column>
+    <dxi-column dataField="Nota"></dxi-column>
+    <dxi-column caption="Grupo">
+        <dxi-column
+            dataField="Cant. Registros Promedio" [width]="6+'%'">
+        </dxi-column>
+        <dxi-column dataField="Cant. Min. Registros Visibles" [width]="6+'%'">
+        </dxi-column>
+    </dxi-column>
+    <!-- <dxi-column
+    dataField="Amount"
+    caption="Sale Amount"
+    dataType="number"
+    format="currency"
+    alignment="right"
+  ></dxi-column> -->
+    <!-- <dxi-column dataField="SaleDate" dataType="date"></dxi-column>
+  <dxi-column dataField="Region" dataType="string"></dxi-column>
+  <dxi-column dataField="Sector" dataType="string"></dxi-column>
+  <dxi-column dataField="Channel" dataType="string"></dxi-column>
+  <dxi-column dataField="Customer" dataType="string" [width]="150"></dxi-column> -->
+</dx-data-grid>

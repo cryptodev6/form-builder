@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {
+  DxDataGridModule,
+  DxBulletModule,
+  DxTemplateModule,
+} from 'devextreme-angular';
 
 @Component({
   selector: 'app-tables-widget14',
@@ -7,8 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablesWidget14Component implements OnInit {
 
+  @Input() dataSource:any
   constructor() { }
-
   ngOnInit(): void {
   }
 

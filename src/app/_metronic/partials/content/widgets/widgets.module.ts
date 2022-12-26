@@ -75,6 +75,17 @@ import { TablesWidget11Component } from './tables/tables-widget11/tables-widget1
 import { TablesWidget12Component } from './tables/tables-widget12/tables-widget12.component';
 import { TablesWidget13Component } from './tables/tables-widget13/tables-widget13.component';
 import { TablesWidget14Component } from './tables/tables-widget14/tables-widget14.component';
+import { 
+  DxTabsModule, 
+  DxSelectBoxModule,
+  DxDropDownBoxModule,
+  DxTreeViewModule,
+  DxDataGridModule,
+  DxCheckBoxModule,
+  DxPopupModule, 
+  DxButtonModule,
+  DxBulletModule,
+  DxTemplateModule} from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -156,6 +167,7 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     InlineSVGModule,
     NgApexchartsModule,
     NgbDropdownModule,
+    DxDataGridModule
   ],
   exports: [
     // Advanced Tables
