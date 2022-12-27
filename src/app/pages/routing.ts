@@ -9,7 +9,7 @@ const Routing: Routes = [
       ),
   },
   {
-    path: 'configuration',
+    path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },

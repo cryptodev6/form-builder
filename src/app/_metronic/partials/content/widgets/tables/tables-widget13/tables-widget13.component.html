@@ -1,533 +1,102 @@
-<!-- begin::Header -->
-<div class="card-header border-0 pt-5">
-  <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Recent Orders</span>
-    <span class="text-muted mt-1 fw-bold fs-7">Over 500 orders</span>
-  </h3>
-  <div class="card-toolbar">
-    <!-- begin::Menu -->
-    <button
-      type="button"
-      class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
-      data-kt-menu-trigger="click"
-      data-kt-menu-placement="bottom-end"
-      data-kt-menu-flip="top-end"
-    >
-      <span
-        [inlineSVG]="'./assets/media/icons/duotune/general/gen024.svg'"
-        class="svg-icon svg-icon-2"
-      ></span>
-    </button>
-    <!-- begin::Menu 2 -->
-    <app-dropdown-menu2></app-dropdown-menu2>
-    <!-- end::Menu 2 -->
-    <!-- end::Menu -->
-  </div>
-</div>
-<!-- end::Header -->
-<!-- begin::Body -->
-<div class="card-body py-3">
-  <!-- begin::Table container -->
-  <div class="table-responsive">
-    <!-- begin::Table -->
-    <table
-      class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3"
-    >
-      <!-- begin::Table head -->
-      <thead>
-        <tr class="fw-bolder text-muted">
-          <th class="w-25px">
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="1"
-                data-kt-check="true"
-                data-kt-check-target=".widget-13-check"
-              />
-            </div>
-          </th>
-          <th class="min-w-150px">Order Id</th>
-          <th class="min-w-140px">Country</th>
-          <th class="min-w-120px">Date</th>
-          <th class="min-w-120px">Company</th>
-          <th class="min-w-120px">Total</th>
-          <th class="min-w-120px">Status</th>
-          <th class="min-w-100px text-end">Actions</th>
-        </tr>
-      </thead>
-      <!-- end::Table head -->
-      <!-- begin::Table body -->
-      <tbody>
-        <tr>
-          <td>
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input widget-13-check"
-                type="checkbox"
-                value="1"
-              />
-            </div>
-          </td>
-          <td>
-            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-              56037-XDER
-            </a>
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Brasil
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: PH</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              05/28/2020
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Intertico
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">
-              Web, UI/UX Design
-            </span>
-          </td>
-          <td class="text-dark fw-bolder text-hover-primary fs-6">$3560</td>
-          <td>
-            <span class="badge badge-light-success">Approved</span>
-          </td>
-          <td class="text-end">
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input widget-13-check"
-                type="checkbox"
-                value="1"
-              />
-            </div>
-          </td>
-          <td>
-            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-              05822-FXSP
-            </a>
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Belarus
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BY</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              04/18/2021
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Agoda
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">
-              Houses &amp; Hotels
-            </span>
-          </td>
-          <td class="text-dark fw-bolder text-hover-primary fs-6">$4850</td>
-          <td>
-            <span class="badge badge-light-warning">In Progress</span>
-          </td>
-          <td class="text-end">
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input widget-13-check"
-                type="checkbox"
-                value="1"
-              />
-            </div>
-          </td>
-          <td>
-            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-              4472-QREX
-            </a>
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Phillipines
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BH</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              07/23/2019
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              RoadGee
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Transportation</span
-            >
-          </td>
-          <td class="text-dark fw-bolder text-hover-primary fs-6">$8376</td>
-          <td>
-            <span class="badge badge-light-danger">Success</span>
-          </td>
-          <td class="text-end">
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input widget-13-check"
-                type="checkbox"
-                value="1"
-              />
-            </div>
-          </td>
-          <td>
-            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-              00347-BCLQ
-            </a>
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Argentina
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BR</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              12/21/2021
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              The Hill
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
-          </td>
-          <td class="text-dark fw-bolder text-hover-primary fs-6">$9486</td>
-          <td>
-            <span class="badge badge-light-info">Rejected</span>
-          </td>
-          <td class="text-end">
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
-            >
-              <input
-                class="form-check-input widget-13-check"
-                type="checkbox"
-                value="1"
-              />
-            </div>
-          </td>
-          <td>
-            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-              59486-XDER
-            </a>
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Agoda
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BT</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              05/28/2020
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
-          </td>
-          <td>
-            <a
-              href="#"
-              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
-            >
-              Phillipines
-            </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Transportation</span
-            >
-          </td>
-          <td class="text-dark fw-bolder text-hover-primary fs-6">$8476</td>
-          <td>
-            <span class="badge badge-light-primary">Approved</span>
-          </td>
-          <td class="text-end">
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen019.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-            <a
-              href="#"
-              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/general/gen027.svg'"
-                class="svg-icon svg-icon-3"
-              ></span>
-            </a>
-          </td>
-        </tr>
-      </tbody>
-      <!-- end::Table body -->
-    </table>
-    <!-- end::Table -->
-  </div>
-  <!-- end::Table container -->
-</div>
-<!-- begin::Body -->
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="dataSource"
+  [remoteOperations]="false"
+  [allowColumnReordering]="true"
+  [rowAlternationEnabled]="true"
+  [columnAutoWidth]="true"
+  [showBorders]="true"
+  (onExporting)="onExporting($event)">
+  <dxo-search-panel
+    [visible]="true"
+    [width]="240"
+    placeholder="Search..."></dxo-search-panel>
+  <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling>
+  <dxo-row-dragging
+    [allowReordering]="true"
+    [onReorder]="onReorder"
+    dropFeedbackMode="push"></dxo-row-dragging>
+  <dxo-selection mode="multiple"></dxo-selection>
+  <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-export
+    [enabled]="true"
+    [formats]="['pdf','excel']"
+    [allowExportSelectedData]="true"></dxo-export>
+
+  <dxi-column dataField="ID" [width]="70"
+    [fixed]="true"></dxi-column>
+  <dxi-column dataField="Address"></dxi-column>
+  <dxi-column dataField="CompanyName"></dxi-column>
+  <dxi-column dataField="Phone"></dxi-column>
+  <dxi-column dataField="Fax"></dxi-column>
+  <dxi-column dataField="City"></dxi-column>
+  <dxo-editing
+    mode="popup"
+    [allowUpdating]="true"
+    [allowDeleting]="true"
+    [useIcons]="true">
+    <dxo-popup
+      title="Edit Employee Info"
+      [showTitle]="true"
+      [width]="700"
+      [height]="300">
+    </dxo-popup>
+    <dxo-form>
+      <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
+        <dxi-item dataField="Address"></dxi-item>
+        <dxi-item dataField="CompanyName"></dxi-item>
+        <dxi-item dataField="Phone"></dxi-item>
+        <dxi-item dataField="Fax"></dxi-item>
+        <dxi-item dataField="City"></dxi-item>
+      </dxi-item>
+    </dxo-form>
+  </dxo-editing>
+  <dxi-column type="buttons" [width]="110">
+    <dxi-button name="edit"></dxi-button>
+    <dxi-button name="delete"></dxi-button>
+    <dxi-button
+      hint="Clone"
+      icon="copy"
+      [visible]="isCloneIconVisible"
+      [onClick]="cloneIconClick"></dxi-button>
+  </dxi-column>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager
+    [visible]="true"
+    [showInfo]="true"
+    [displayMode]="'compact'"
+    [showNavigationButtons]="true"
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[5,10, 25, 50, 100]">
+  </dxo-pager>
+
+  <dxo-toolbar>
+    <dxi-item name="exportButton" location="before"></dxi-item>
+    <dxi-item location="before">
+      <div *dxTemplate>
+        <div routerLink="/dashboard/configure" style="cursor:pointer">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+            height="24px"
+            viewBox="0 0 24 24" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <rect x="0" y="0" width="24" height="24"></rect>
+              <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506
+                L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814
+                L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19
+                L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15
+                15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9
+                C10.3431458,9
+                9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z"
+                fill="#000000"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </dxi-item>
+    <dxi-item name="searchPanel" location="after"></dxi-item>
+  </dxo-toolbar>
+
+</dx-data-grid>

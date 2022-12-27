@@ -15,6 +15,7 @@ import { DxTabsModule,
   DxTemplateModule} from 'devextreme-angular';
   import {  } from 'devextreme-angular';
 import { DashboardService } from './dashboard.service';
+import { ConfigureComponent } from '../../_metronic/partials/content/widgets/configure/configure.component';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -24,6 +25,10 @@ import { DashboardService } from './dashboard.service';
       {
         path: '',
         component: DashboardComponent,
+      },
+      {
+        path: 'configure',
+        component: ConfigureComponent 
       },
     ]),
     WidgetsModule,
