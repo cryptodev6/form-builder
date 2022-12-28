@@ -86,10 +86,12 @@ import {
   DxButtonModule,
   DxBulletModule,
   DxTemplateModule,
+  DxTooltipModule
 } from 'devextreme-angular';
 import { ConfigureComponent } from './configure/configure.component';
 import {ConfigureService} from '../widgets/configure/configure.service';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -182,7 +184,9 @@ import { RouterModule } from '@angular/router';
     DxButtonModule,
     DxBulletModule,
     DxTemplateModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    DxTooltipModule
   ],
   exports: [
     // Advanced Tables

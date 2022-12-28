@@ -5,44 +5,44 @@
   [allowColumnReordering]="true"
   [rowAlternationEnabled]="true"
   [columnAutoWidth]="true"
+  [columnHidingEnabled]="true"
   [showBorders]="true"
-  (onExporting)="onExporting($event)">
-  <dxo-search-panel
-    [visible]="true"
-    [width]="240"
-    placeholder="Search..."></dxo-search-panel>
+  (onSelectionChanged)="selectionChanged($event)"
+  (onExporting)="onExporting($event)"
+  keyExpr="ID">
+  <dxo-column-chooser [enabled]="true" [allowSearch]="allowSearch"
+    mode="dragAndDrop">
+  </dxo-column-chooser>
+  <dxo-search-panel [visible]="true" [width]="240" placeholder="Search..."></dxo-search-panel>
   <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling>
-  <dxo-row-dragging
-    [allowReordering]="true"
-    [onReorder]="onReorder"
+  <dxo-row-dragging [allowReordering]="true" [onReorder]="onReorder"
     dropFeedbackMode="push"></dxo-row-dragging>
   <dxo-selection mode="multiple"></dxo-selection>
   <dxo-column-fixing [enabled]="true"></dxo-column-fixing>
   <dxo-filter-row [visible]="true"></dxo-filter-row>
   <dxo-header-filter [visible]="true"></dxo-header-filter>
-  <dxo-export
-    [enabled]="true"
-    [formats]="['pdf','excel']"
+  <dxo-export [enabled]="true" [formats]="['pdf','excel']"
     [allowExportSelectedData]="true"></dxo-export>
-
-  <dxi-column dataField="ID" [width]="70"
-    [fixed]="true"></dxi-column>
+  <dxi-column cellTemplate="starCellTemplate" [width]="36" [fixed]="true"
+    dataField="isHighlighted" caption="" [allowFiltering]="false" [allowSorting]="false">
+  </dxi-column>
+  <dxi-column dataField="ID" [width]="70" [fixed]="true"></dxi-column>
   <dxi-column dataField="Address"></dxi-column>
   <dxi-column dataField="CompanyName"></dxi-column>
   <dxi-column dataField="Phone"></dxi-column>
   <dxi-column dataField="Fax"></dxi-column>
   <dxi-column dataField="City"></dxi-column>
-  <dxo-editing
-    mode="popup"
-    [allowUpdating]="true"
-    [allowDeleting]="true"
+  <dxi-column dataField="Zipcode" [visible]="false"></dxi-column>
+  <dxi-column type="buttons" [width]="110">
+    <dxi-button name="edit"></dxi-button>
+    <dxi-button name="delete"></dxi-button>
+    <dxi-button hint="Clone" icon="copy" [visible]="isCloneIconVisible"
+      [onClick]="cloneIconClick"></dxi-button>
+  </dxi-column>
+  <dxo-editing mode="popup" [allowUpdating]="true" [allowDeleting]="true"
     [useIcons]="true">
-    <dxo-popup
-      title="Edit Employee Info"
-      [showTitle]="true"
-      [width]="700"
-      [height]="300">
-    </dxo-popup>
+    <dxo-popup title="Edit Employee Info" [showTitle]="true" [width]="700"
+      [height]="300"></dxo-popup>
     <dxo-form>
       <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
         <dxi-item dataField="Address"></dxi-item>
@@ -53,15 +53,6 @@
       </dxi-item>
     </dxo-form>
   </dxo-editing>
-  <dxi-column type="buttons" [width]="110">
-    <dxi-button name="edit"></dxi-button>
-    <dxi-button name="delete"></dxi-button>
-    <dxi-button
-      hint="Clone"
-      icon="copy"
-      [visible]="isCloneIconVisible"
-      [onClick]="cloneIconClick"></dxi-button>
-  </dxi-column>
   <dxo-paging [pageSize]="10"></dxo-paging>
   <dxo-pager
     [visible]="true"
@@ -71,22 +62,25 @@
     [showPageSizeSelector]="true"
     [allowedPageSizes]="[5,10, 25, 50, 100]">
   </dxo-pager>
-
   <dxo-toolbar>
     <dxi-item name="exportButton" location="before"></dxi-item>
     <dxi-item location="before">
       <div *dxTemplate>
-        <div routerLink="/dashboard/configure" style="cursor:pointer">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+        <div routerLink="/dashboard/configure" style="cursor:pointer" id="product1" (mouseenter)="toggleDefault()"
+        (mouseleave)="toggleDefault()">
+          <svg width="24px"
             height="24px"
             viewBox="0 0 24 24" version="1.1">
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g stroke="none" stroke-width="1" fill="none"
+              fill-rule="evenodd">
               <rect x="0" y="0" width="24" height="24"></rect>
               <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506
-                L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814
-                L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19
-                L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15
+                L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12
+                L19,14.4852814
+                L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19
+                L5,19
+                L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15
+                C13.6568542,15
                 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9
                 C10.3431458,9
                 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z"
@@ -94,9 +88,68 @@
             </g>
           </svg>
         </div>
+        <dx-tooltip
+        position="top"
+      target="#product1"
+      [(visible)]="defaultVisible"
+      [hideOnOutsideClick]="false"
+    >
+    Configuration
+    </dx-tooltip>
       </div>
     </dxi-item>
+    <dxi-item name="columnChooserButton" location="after"></dxi-item>
     <dxi-item name="searchPanel" location="after"></dxi-item>
   </dxo-toolbar>
-
-</dx-data-grid>
+  <div *dxTemplate="let info of 'starCellTemplate'">
+    <div (click)="highlightRecord(info)">
+      <div *ngIf="!info.value" class="d-flex justify-content-center
+        align-items-center">
+        <svg version="1.1" width="14" height="14" viewBox="0 0 256 256">
+          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none;
+            stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10;
+            fill: none; fill-rule: nonzero; opacity: 1;"
+            transform="translate(1.4065934065934016 1.4065934065934016)
+            scale(2.81 2.81)">
+            <path d="M 18.228 87.915 c -0.416 0 -0.832 -0.13 -1.184 -0.389 c
+              -0.693 -0.509 -0.983 -1.403 -0.721 -2.222 l 9.549 -29.801 L 0.815
+              37.065 C 0.119 36.553 -0.17 35.651 0.1 34.83 c 0.27 -0.821 1.036
+              -1.376 1.9 -1.376 h 31.018 L 43.104 3.448 C 43.378 2.634 44.141
+              2.085 45 2.085 s 1.622 0.548 1.895 1.363 l 10.086 30.006 H 88 c
+              0.864 0 1.631 0.555 1.9 1.376 c 0.27 0.821 -0.019 1.723 -0.715
+              2.235 L 64.128 55.504 l 9.548 29.801 c 0.263 0.818 -0.027 1.713
+              -0.72 2.222 c -0.695 0.509 -1.635 0.52 -2.336 0.023 L 45 69.506 L
+              19.38 87.55 C 19.034 87.794 18.631 87.915 18.228 87.915 z M 8.092
+              37.454 l 21.308 15.68 c 0.692 0.51 0.981 1.403 0.719 2.222 l
+              -8.167 25.49 l 21.895 -15.421 c 0.691 -0.486 1.613 -0.486 2.303 0
+              l 21.895 15.421 l -8.167 -25.49 c -0.263 -0.818 0.027 -1.712 0.719
+              -2.222 l 21.308 -15.68 H 55.544 c -0.859 0 -1.622 -0.548 -1.895
+              -1.363 L 45 10.363 l -8.648 25.729 c -0.274 0.814 -1.037 1.363
+              -1.896 1.363 H 8.092 z" style="stroke: none; stroke-width: 1;
+              stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin:
+              miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule:
+              nonzero; opacity: 0.25;" transform=" matrix(1 0 0 1 0 0) "
+              stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div *ngIf="info.value" class="d-flex
+          justify-content-center
+          align-items-center">
+          <svg width="14" height="14" viewBox="0 0 24 24">
+            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48
+              8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828
+              8.332-1.151z"/></svg>
+          </div>
+        </div>
+  </div>
+  <dxo-master-detail [enabled]="false" template="detail">
+  </dxo-master-detail>
+  <div *dxTemplate="let employee of 'detail'">
+   test
+  </div>
+    </dx-data-grid>
+    <div class="dx-field d-flex align-items-center ps-2">
+      <div class="me-5">Cerrar al seleccionar</div>    
+      <dx-check-box [(ngModel)]="closeOnSelect" (onValueChanged)="handleValueChange($event)" [disabled]="isDisableCheckBox"></dx-check-box>   
+    </div>

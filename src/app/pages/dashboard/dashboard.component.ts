@@ -17,7 +17,8 @@ export class DashboardComponent {
       Phone: '(800) 555-2797',
       Fax: '(800) 555-2171',
       Website: 'http://www.nowebsitesupermart.com',
-      OrderIndex:0
+      OrderIndex:0,
+      isHighlighted:0
     },
     {
       ID: 2,
@@ -28,7 +29,8 @@ export class DashboardComponent {
       Phone: '(612) 304-6073',
       Fax: '(612) 304-6074',
       Website: 'http://www.nowebsitemusic.com',
-      OrderIndex:1
+      OrderIndex:1,
+      isHighlighted:0
     },
     {
       ID: 3,
@@ -39,7 +41,8 @@ export class DashboardComponent {
       Phone: '(800) 955-2292',
       Fax: '(800) 955-2293',
       Website: 'http://www.nowebsitetomsclub.com',
-      OrderIndex:2
+      OrderIndex:2,
+      isHighlighted:0
     },
     {
       ID: 4,
@@ -50,7 +53,8 @@ export class DashboardComponent {
       Phone: '(847) 286-2500',
       Fax: '(847) 286-2501',
       Website: 'http://www.nowebsiteemart.com',
-      OrderIndex:3
+      OrderIndex:3,
+      isHighlighted:0
     },
     {
       ID: 5,
@@ -61,7 +65,8 @@ export class DashboardComponent {
       Phone: '(847) 940-2500',
       Fax: '(847) 940-2501',
       Website: 'http://www.nowebsitewalters.com',
-      OrderIndex:4
+      OrderIndex:4,
+      isHighlighted:0
     },
     {
       ID: 6,
@@ -72,7 +77,8 @@ export class DashboardComponent {
       Phone: '(817) 820-0741',
       Fax: '(817) 820-0742',
       Website: 'http://www.nowebsiteshack.com',
-      OrderIndex:5
+      OrderIndex:5,
+      isHighlighted:0
     },
     {
       ID: 7,
@@ -83,7 +89,8 @@ export class DashboardComponent {
       Phone: '(800) 955-2929',
       Fax: '(800) 955-9392',
       Website: 'http://www.nowebsitecircuittown.com',
-      OrderIndex:6
+      OrderIndex:6,
+      isHighlighted:0
     },
     {
       ID: 8,
@@ -95,7 +102,8 @@ export class DashboardComponent {
       Phone: '(612) 291-1000',
       Fax: '(612) 291-2001',
       Website: 'http://www.nowebsitepremierbuy.com',
-      OrderIndex:7
+      OrderIndex:7,
+      isHighlighted:0
     },
     {
       ID: 9,
@@ -107,7 +115,8 @@ export class DashboardComponent {
       Phone: '(630) 438-7800',
       Fax: '(630) 438-7801',
       Website: 'http://www.nowebsiteelectrixmax.com',
-      OrderIndex:8
+      OrderIndex:8,
+      isHighlighted:0
     },
     {
       ID: 10,
@@ -119,7 +128,8 @@ export class DashboardComponent {
       Phone: '(214) 854-3000',
       Fax: '(214) 854-3001',
       Website: 'http://www.nowebsitevideoemporium.com',
-      OrderIndex:9
+      OrderIndex:9,
+      isHighlighted:0
     },
     {
       ID: 11,
@@ -131,7 +141,8 @@ export class DashboardComponent {
       Phone: '(800) 445-6937',
       Fax: '(800) 445-6938',
       Website: 'http://www.nowebsitescreenshop.com',
-      OrderIndex:10
+      OrderIndex:10,
+      isHighlighted:0
     },
     {
       ID: 12,
@@ -143,7 +154,8 @@ export class DashboardComponent {
       Phone: '(408) 996-1010',
       Fax: '(408) 996-1012',
       Website: 'http://www.nowebsitebraeburn.com',
-      OrderIndex:11
+      OrderIndex:11,
+      isHighlighted:0
     },
     {
       ID: 13,
@@ -155,7 +167,8 @@ export class DashboardComponent {
       Phone: '(717) 761-2633',
       Fax: '(717) 761-2334',
       Website: 'http://www.nowebsitepriceco.com',
-      OrderIndex:12
+      OrderIndex:12,
+      isHighlighted:0
     },
     {
       ID: 14,
@@ -167,7 +180,8 @@ export class DashboardComponent {
       Phone: '(995) 623-6785',
       Fax: '(995) 623-6786',
       Website: 'http://www.nowebsiteultimategadget.com',
-      OrderIndex:13
+      OrderIndex:13,
+      isHighlighted:0
     },
     {
       ID: 15,
@@ -179,7 +193,8 @@ export class DashboardComponent {
       Phone: '(800) 595-3232',
       Fax: '(800) 595-3231',
       Website: 'http://www.nowebsitedepot.com',
-      OrderIndex:14
+      OrderIndex:14,
+      isHighlighted:0
     },
     {
       ID: 16,
@@ -191,7 +206,8 @@ export class DashboardComponent {
       Phone: '(626) 265-8632',
       Fax: '(626) 265-8633',
       Website: 'http://www.nowebsiteezstop.com',
-      OrderIndex:15
+      OrderIndex:15,
+      isHighlighted:0
     },
     {
       ID: 17,
@@ -203,7 +219,8 @@ export class DashboardComponent {
       Phone: '(310) 884-9000',
       Fax: '(310) 884-9001',
       Website: 'http://www.nowebsiteclicker.com',
-      OrderIndex:16
+      OrderIndex:16,
+      isHighlighted:0
     },
     {
       ID: 18,
@@ -215,7 +232,8 @@ export class DashboardComponent {
       Phone: '(206) 447-1575',
       Fax: '(206) 447-1576',
       Website: 'http://www.nowebsiteamerica.com',
-      OrderIndex:17
+      OrderIndex:17,
+      isHighlighted:0
     },
     {
       ID: 19,
@@ -227,7 +245,8 @@ export class DashboardComponent {
       Phone: '(310) 237-5642',
       Fax: '(310) 237-5643',
       Website: 'http://www.nowebsitezonetoys.com',
-      OrderIndex:18
+      OrderIndex:18,
+      isHighlighted:0
     },
     {
       ID: 20,
@@ -239,7 +258,8 @@ export class DashboardComponent {
       Phone: '(310) 536-0611',
       Fax: '(310) 536-0612',
       Website: 'http://www.nowebsiteacme.com',
-      OrderIndex:19
+      OrderIndex:19,
+      isHighlighted:0
     },
   ];
 
