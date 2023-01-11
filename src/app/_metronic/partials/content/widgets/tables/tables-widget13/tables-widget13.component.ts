@@ -6,6 +6,7 @@ import { jsPDF } from 'jspdf';
 import * as Excel from 'exceljs';
 import { saveAs } from 'file-saver';
 import { DxTreeListModule, DxTreeListComponent } from 'devextreme-angular';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-tables-widget13',
@@ -64,7 +65,12 @@ export class TablesWidget13Component implements OnInit {
   }
 
   cloneIconClick(e: any) {
-    const clonedItem = { ...e.row.data, ID: this.dataSource.length + 1 };
+
+    const clonedItem = 
+    { ...e.row.data, ID: this.dataSource.length + 1 , 
+      Address : e.row.data.isCopied ? e.row.data.Address : `${e.row.data.Address} ( copy )` ,
+       isCopied : true }; //commented by gaurav
+
     this.dataSource.splice(e.row.rowIndex, 0, clonedItem);
     this.ref.detectChanges();
     e.event.preventDefault();
@@ -101,7 +107,7 @@ export class TablesWidget13Component implements OnInit {
   }
   selectionChanged(e: any) {
     e.component.collapseAll(-1);
-    e.component.expandRow(e.currentSelectedRowKeys[0]);
+    // e.component.expandRow(e.currentSelectedRowKeys[0]); //commented by gaurav 
     this.isDisableCheckBox = false;
     this.selectionChangedEvent = e;
   }
