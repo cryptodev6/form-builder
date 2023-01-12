@@ -50,11 +50,11 @@ const Routing: Routes = [
     loadChildren: () =>
       import('../modules/apps/chat/chat.module').then((m) => m.ChatModule),
   },
-  {
-    path: '',
-    redirectTo: '/configuration',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '',
+  //   redirectTo: '/configuration',
+  //   pathMatch: 'full',
+  // },
   {
     path: '**',
     redirectTo: 'error/404',

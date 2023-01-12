@@ -19,14 +19,14 @@ export class TablesWidget13Component implements OnInit {
   closeOnSelect: boolean = false;
   isDisableCheckBox: boolean = true;
   selectionChangedEvent: any = null;
-  defaultVisible= false;
+  defaultVisible = false;
 
   constructor(private ref: ChangeDetectorRef) {
     this.onReorder = this.onReorder.bind(this); // drag module
     this.cloneIconClick = this.cloneIconClick.bind(this); //duplicate
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   // drag start
   async onReorder(e: any) {
     const visibleRows = e.component.getVisibleRows();
@@ -64,7 +64,12 @@ export class TablesWidget13Component implements OnInit {
   }
 
   cloneIconClick(e: any) {
-    const clonedItem = { ...e.row.data, ID: this.dataSource.length + 1 };
+    const clonedItem =
+    {
+      ...e.row.data, ID: this.dataSource.length + 1,
+      Address: e.row.data.isCopied ? e.row.data.Address : `${e.row.data.Address} ( copy )`,
+      isCopied: true
+    }; //commented by gaurav
     this.dataSource.splice(e.row.rowIndex, 0, clonedItem);
     this.ref.detectChanges();
     e.event.preventDefault();
@@ -101,7 +106,7 @@ export class TablesWidget13Component implements OnInit {
   }
   selectionChanged(e: any) {
     e.component.collapseAll(-1);
-    e.component.expandRow(e.currentSelectedRowKeys[0]);
+    // e.component.expandRow(e.currentSelectedRowKeys[0]); //commented by gaurav 
     this.isDisableCheckBox = false;
     this.selectionChangedEvent = e;
   }
