@@ -23,10 +23,10 @@
   <dxo-header-filter [visible]="true"></dxo-header-filter>
   <dxo-export [enabled]="true" [formats]="['pdf','excel']"
     [allowExportSelectedData]="true"></dxo-export>
-  <dxi-column cellTemplate="starCellTemplate" [width]="36" [fixed]="true"
-    dataField="isHighlighted" caption="" [allowFiltering]="false" [allowSorting]="false">
+  <dxi-column cellTemplate="starCellTemplate" [width]="80" [fixed]="true"
+    dataField="isHighlighted" caption="" [allowSorting]="false" [allowFiltering]="true">
   </dxi-column>
-  <dxi-column dataField="ID" [width]="70" [fixed]="true"></dxi-column>
+  <dxi-column dataField="ID" [width]="70" [fixed]="true"></dxi-column>  
   <dxi-column dataField="Address"></dxi-column>
   <dxi-column dataField="CompanyName"></dxi-column>
   <dxi-column dataField="Phone"></dxi-column>

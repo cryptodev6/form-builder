@@ -26,7 +26,10 @@ export class TablesWidget13Component implements OnInit {
     this.cloneIconClick = this.cloneIconClick.bind(this); //duplicate
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.dataSource.map((el: any) => el.isHighlighted =false);
+
+  }
   // drag start
   async onReorder(e: any) {
     const visibleRows = e.component.getVisibleRows();
