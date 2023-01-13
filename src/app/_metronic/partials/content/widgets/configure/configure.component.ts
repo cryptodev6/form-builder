@@ -27,10 +27,13 @@ export class ConfigureComponent {
   tabs: Tab[];
   tabContent: string;
   gridBoxValue: number[] = [3];
+  gridBoxValue1: number[] = [3];
   isGridBoxOpened: boolean;
   gridDataSource: any;
+  gridDataSource1: any;
   gridColumns = ['CompanyName', 'City', 'Phone'];
   popupVisible = false;
+  popupVisible1=false;
   popupTitle: string;
   demo = [
     {
@@ -185,11 +188,14 @@ export class ConfigureComponent {
     closeButtonLabel: 'Cancel',
   };
   @ViewChild('modal') private modalComponent: ModalComponent;
+  // @ViewChild('modal') private modalComponent1: ModalComponent;
 
   constructor(
     private configureService: ConfigureService,
     private httpClient: HttpClient
   ) {
+
+    console.log("==  configuaration  cccccccccccc")
     this.longtabs = configureService.getLongtabs();
     this.tabs = configureService.getTabs();
     this.tabContent = this.tabs[0].content;
@@ -199,6 +205,11 @@ export class ConfigureComponent {
       this.httpClient,
       'customers.json'
     );
+    this.gridDataSource1 = this.makeAsyncDataSource(
+      this.httpClient,
+      'customers.json'
+    );
+
   }
 
   makeAsyncDataSource(http: HttpClient, jsonFile: string) {
@@ -220,24 +231,62 @@ export class ConfigureComponent {
   // }
 
   async openModal() {
+
+    console.log("==  configuaraiont model clicked");
     return await this.modalComponent.open();
   }
 
   onGridBoxOptionChanged(e: any) {
+ 
+    
+    if (e.name === 'text') {
+      console.log("===== <<< event ===  onGridBoxOptionChanged",e);
+        this.isGridBoxOpened = false;
+      }
     if (e.name === 'value') {
       this.isGridBoxOpened = false;
     }
   }
+  
+  onGridBoxOptionChanged1(e: any) {
+
+    if (e.name === 'text') {
+      
+    console.log("===== <<< event ===  onGridBoxOptionChanged1",e);
+      this.isGridBoxOpened = false;
+    }
+    if (e.name === 'value') {
+      this.isGridBoxOpened = false;
+    }
+  }
+
   gridBox_displayExpr(item: any) {
     return item && `${item.CompanyName} <${item.Phone}>`;
   }
   selectTab(event: any) {
-    console.log('event: ', event);
-    this.popupVisible = true;
-    this.popupTitle = event.itemData.text;
+    // console.log('event: ', event);
+    // console.log('event event : ', event.event);
+    // console.log('event.element: ', event.element);
+    // console.log('event.compenent: ', event.compenent);
+    // console.log('event.itemData.text:',event.itemData.text);
+    // console.log('this.tabs[e.itemIndex].content',this.tabs[event.itemIndex].content)
+
+
+    
+    
+    if(event.itemData.text=='Listado'){
+      console.log('modalComponent');
+      this.popupVisible = true;
+      this.popupTitle = event.itemData.text;
+    }
+    else{
+      console.log('modalComponent1');
+      this.popupVisible1 = true;
+      this.popupTitle = event.itemData.text;
+    }
   }
   closePopup(){
     this.popupVisible = false;
-
+    this.popupVisible1 = false;
   }
 }

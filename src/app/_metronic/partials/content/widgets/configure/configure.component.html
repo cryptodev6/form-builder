@@ -97,6 +97,94 @@
         </div>
       </div>
     </dx-popup>
+
+    <dx-popup
+      [width]="400"
+      [height]="280"
+      [title]="popupTitle"
+      [(visible)]="popupVisible1">
+      <!-- [hideOnOutsideClick]="true" -->
+      <div *dxTemplate="let data of 'content'">
+        <div class="row gy-5 gx-xl-8">
+          <div class="col-xl-12 mt-0">
+            <div class="dx-fieldset m-0 my-3">
+              <div class="dx-field">
+                <div class="dx-field-value w-100">
+                  <dx-select-box
+                    [dataSource]="simpleProducts"
+                    displayExpr="Name"
+                    valueExpr="ID"
+                    [searchMode]="searchModeOption"
+                    [searchExpr]="searchExprOption"
+                    [searchTimeout]="searchTimeoutOption"
+                    [minSearchLength]="minSearchLengthOption"
+                    [searchEnabled]="true"
+                    [showDataBeforeSearch]="showDataBeforeSearchOption"></dx-select-box>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-12 mt-0">
+            <div class="dx-fieldset m-0 my-3">
+              <div class="dx-field">
+                <div class="dx-field-value w-100">
+                  <dx-drop-down-box
+                    [(value)]="gridBoxValue1"
+                    [(opened)]="isGridBoxOpened"
+                    valueExpr="ID"
+                    [deferRendering]="false"
+                    [displayExpr]="gridBox_displayExpr"
+                    placeholder="Select a value..."
+                    [showClearButton]="true"
+                    [dataSource]="gridDataSource1"
+                    (onOptionChanged)="onGridBoxOptionChanged1($event)">
+                    <div *dxTemplate="let data of 'content'">
+                      <dx-data-grid
+                        [dataSource]="gridDataSource1"
+                        [columns]="gridColumns"
+                        [hoverStateEnabled]="true"
+                        [(selectedRowKeys)]="gridBoxValue1"
+                        height="100%">
+                        <dxo-selection mode="single"></dxo-selection>
+                        <dxo-filter-row [visible]="true"></dxo-filter-row>
+                        <dxo-scrolling mode="virtual"></dxo-scrolling>
+                        <dxo-paging [enabled]="true" [pageSize]="10"></dxo-paging>
+                      </dx-data-grid>
+                    </div>
+                  </dx-drop-down-box>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-12 d-flex align-items-center mt-0">
+            <div class="dx-field w-100">
+              <div class="dx-field-label">Orden Personalizado</div>
+              <div class="dx-field-value">
+                <dx-check-box [value]="false"></dx-check-box>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-12 d-flex">
+            <dx-button
+              text="Acceptar"
+              stylingMode="contained"
+              type="default"
+              class="me-3"
+              (onClick)="closePopup()"
+              >
+            </dx-button>
+            <dx-button
+              text="Cancelar"
+              stylingMode="outlined"
+              type="normal"
+              (onClick)="closePopup()"
+              >
+            </dx-button>
+          </div>
+        </div>
+      </div>
+    </dx-popup>
+
   </div>
   
   <!-- begin::Row -->
