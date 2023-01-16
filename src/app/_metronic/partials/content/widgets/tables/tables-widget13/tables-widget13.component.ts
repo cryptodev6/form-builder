@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, INJECTOR, Input, OnInit } from '@angular/core';
 import { exportDataGrid as exportPdfDataGrid } from 'devextreme/pdf_exporter';
 import { exportDataGrid } from 'devextreme/excel_exporter';
 import { jsPDF } from 'jspdf';
@@ -14,12 +14,19 @@ import { DxTreeListModule, DxTreeListComponent } from 'devextreme-angular';
 })
 export class TablesWidget13Component implements OnInit {
   @Input() dataSource: any;
+  @Input() dataSource1:any;
   allowSearch: boolean;
   columnChooserModes: any;
   closeOnSelect: boolean = false;
   isDisableCheckBox: boolean = true;
   selectionChangedEvent: any = null;
   defaultVisible = false;
+  
+    IDWidth = ""
+    CompanyNameWidth= ""
+    AddressWidth = ""
+    CityWidth = "" 
+  
 
   constructor(private ref: ChangeDetectorRef) {
     this.onReorder = this.onReorder.bind(this); // drag module
@@ -28,7 +35,15 @@ export class TablesWidget13Component implements OnInit {
 
   ngOnInit(): void { 
     this.dataSource.map((el: any) => el.isHighlighted =false);
-
+    this.IDWidth =  this.dataSource1[0].IDWidth;
+    console.log("==this.IDWidth ",this.IDWidth);
+    this.CompanyNameWidth = this.dataSource1[0].CompanyNameWidth;
+    console.log("==this.CompanyNameWidth ",this.CompanyNameWidth);
+    this.AddressWidth = this.dataSource1[0].AddressWidth;
+    console.log("==this.AddressWidth ",this.AddressWidth);
+    this.CityWidth = this.dataSource1[0].CityWidth;
+    console.log("==this.CityWidth ",this.CityWidth);
+   
   }
   // drag start
   async onReorder(e: any) {

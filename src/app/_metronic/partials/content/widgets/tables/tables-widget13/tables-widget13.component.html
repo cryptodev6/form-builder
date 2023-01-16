@@ -1,6 +1,9 @@
+
+
 <dx-data-grid
   id="gridContainer"
   [dataSource]="dataSource"
+  
   [remoteOperations]="false"
   [allowColumnReordering]="true"
   [rowAlternationEnabled]="true"
@@ -26,12 +29,12 @@
   <dxi-column cellTemplate="starCellTemplate" [width]="80" [fixed]="true"
     dataField="isHighlighted" caption="" [allowSorting]="false" [allowFiltering]="true">
   </dxi-column>
-  <dxi-column dataField="ID" [width]="70" [fixed]="true"></dxi-column>  
-  <dxi-column dataField="Address"></dxi-column>
-  <dxi-column dataField="CompanyName"></dxi-column>
+  <dxi-column dataField="ID" [width]=[IDWidth] [fixed]="true"></dxi-column>  
+  <dxi-column dataField="Address" [width]=[AddressWidth]></dxi-column>
+  <dxi-column dataField="CompanyName" [width]=[CompanyNameWidth]></dxi-column>
   <dxi-column dataField="Phone"></dxi-column>
   <dxi-column dataField="Fax"></dxi-column>
-  <dxi-column dataField="City"></dxi-column>
+  <dxi-column dataField="City" [width]=[CityWidth]></dxi-column>
   <dxi-column dataField="Zipcode" [visible]="false"></dxi-column>
   <dxi-column type="buttons" [width]="110">
     <dxi-button name="edit"></dxi-button>

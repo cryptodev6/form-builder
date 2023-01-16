@@ -7,6 +7,7 @@ import { DashboardService } from './dashboard.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
+
   dashboardData = [
     {
       ID: 1,
@@ -262,6 +263,21 @@ export class DashboardComponent {
       isHighlighted:0
     },
   ];
+
+  dashboardData1= [
+    {
+      IDWidth: "80px",
+      CompanyNameWidth: '400px',
+      AddressWidth: '250px',
+      CityWidth: '100px',
+    }
+  ];
+
+  
+
+
+
+
 
   constructor(private dashboardService: DashboardService) {}
 }
