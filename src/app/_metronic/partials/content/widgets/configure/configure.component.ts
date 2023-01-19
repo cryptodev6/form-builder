@@ -37,8 +37,8 @@ export class ConfigureComponent {
   popupTitle: string;
   demo = [
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 1',
+      Abreviatura: 'A',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -55,8 +55,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 2',
+      Abreviatura: 'B',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -73,8 +73,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 3',
+      Abreviatura: 'C',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -91,8 +91,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 4',
+      Abreviatura: 'D',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -109,8 +109,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 5',
+      Abreviatura: 'E',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -127,8 +127,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 6',
+      Abreviatura: 'F',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -145,8 +145,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 7',
+      Abreviatura: 'G',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -163,8 +163,8 @@ export class ConfigureComponent {
       Nota: '',
     },
     {
-      Nombre: 'Nombre personalización',
-      Abreviatura: '',
+      Nombre: 'Nombre personalización 8',
+      Abreviatura: 'H',
       Descripción: 'Nombre del filtro por defecto que tendra el listado',
       Obligatorio: 'No',
       Único: 'No',
@@ -173,7 +173,7 @@ export class ConfigureComponent {
       'Tipo de Dato': 'Caracteres',
       Máscara: '',
       Dominio: '',
-      'Por Defecto': '',
+      'Por Defecto': 'I',
       '% Promedio de Uso': '',
       'Longitud Máxima': '100',
       'Número decimales': '',
